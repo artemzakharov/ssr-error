@@ -29,12 +29,20 @@
 
   <ItemGroup>
     <None Remove="ClientApp\src\app\app.server.module.ts" />
+    <None Remove="ClientApp\src\app\feature-modules\lazy\components\lazy.component.ts" />
+    <None Remove="ClientApp\src\app\feature-modules\lazy\lazy.module.ts" />
     <None Remove="ClientApp\src\main.server.ts" />
   </ItemGroup>
 
   <ItemGroup>
     <TypeScriptCompile Include="ClientApp\src\app\app.server.module.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\feature-modules\lazy\components\lazy.component.ts" />
+    <TypeScriptCompile Include="ClientApp\src\app\feature-modules\lazy\lazy.module.ts" />
     <TypeScriptCompile Include="ClientApp\src\main.server.ts" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ClientApp\src\app\core-modules\" />
   </ItemGroup>
 
   <Target Name="DebugEnsureNodeEnv" BeforeTargets="Build" Condition=" '$(Configuration)' == 'Debug' And !Exists('$(SpaRoot)node_modules') ">
